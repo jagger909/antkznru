@@ -1,0 +1,121 @@
+{% load staticfiles %}
+
+<!--header-->
+<header id="header-7">
+    <!--Search-->
+    <div id="search">
+        <button type="button" class="close">×</button>
+        <form>
+            <input type="search" value="" placeholder="Введите текст поиска...." required/>
+            <button type="submit" class="btn_default cd-btn">Поиск</button>
+        </form>
+    </div>
+    <!--Search-->
+
+    <div class="header_top_bar">
+        <div class="container">
+            <div class="row">
+                <div class="logo_area column_details">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><a href="{% url "main" %}"><img alt=""
+                                                                                                      src="{% static "images/logoWithe.png" %}"></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-12 column_details">
+                    <h4>E-MAIL</h4>
+                    <p>info@antkzn.ru</p>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-12 column_details">
+                    <h4>Часы работы</h4>
+                    <p>Круглосуточно 24/7 </p>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-12 column_details">
+                    <div class="column_left"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="column_right">
+                        <h4>Позвоните нам</h4>
+                        <p>(843) 266-10-67</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 column_details">
+                    <div class="column_four">
+                        <div class="header_social">
+                            <a target="_blank" href="http://www.facebook.com/"><i
+                                    class="fa fa-facebook"></i></a>
+                            <a target="_blank" href="http://www.skype.com/"><i
+                                    class="fa fa-skype"></i></a>
+                            <a target="_blank" href="http://www.twitter.com/"><i
+                                    class="fa fa-twitter"></i></a>
+                            <a class="search_btn" target="_blank" href="#"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default navbar-sticky bootsnav">
+        <div class="container">
+
+            <!-- Start Atribute Navigation -->
+            <div id="buttons-nav" class="attr-nav">
+                <ul>
+                    <li class="appointment-btn visible-xs">
+                        <a href="tel:+78432661067" class="cd-btn third">
+                            <i class="appointment-icon fa fa-phone"></i>
+                            <span class="">Позвонить</span>
+                        </a>
+                    </li>
+                    <li class="appointment-btn">
+                        <a href="{% url 'callback_index' %}" class="cd-btn secondary" data-toggle="modal" data-target="#gridSystemModal">
+                            <i class="appointment-icon fa fa-calendar"></i>
+                            <span class="appointment-btn-text">Заявка</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Atribute Navigation -->
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i
+                        class="fa fa-bars"></i></button>
+                <a class="navbar-brand" href="{% url "main" %}"><img src="{% static "images/logo.png" %}" class="logo"
+                                                                     width="200px" alt=""> </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
+
+                    {% url "main" as page_url %}
+                    <li {% if page_url == current_url %} class="active"{% endif %}><a href="{{ page_url }}">Главная</a></li>
+
+                    {#                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Магазин</a>#}
+                    {#                        <ul class="dropdown-menu">#}
+                    {#                            {% for object in categories %}#}
+                    {#                                {% url "goods_index" pk=object.pk as page_url %}#}
+                    {#                                <li{% if forloop.first %} class="indented"{% endif %}><a href="{{ page_url }}" {% if page_url == current_url %} class="current"{% endif %}>{{ object.name }}</a></li>#}
+                    {#                            {% endfor %}#}
+                    {#                        </ul>#}
+                    {#                    </li>#}
+                    {##}
+                    {#                    {% url "news_index" as page_url %}#}
+                    {#                    <li {% if page_url == current_url %} class="active"{% endif %}><a href="{{ page_url }}">Новости</a></li>#}
+                    {% url "aboutus_index" as page_url %}
+                    <li {% if page_url == current_url %} class="active"{% endif %}><a href="{{ page_url }}">О нас</a></li>
+
+                    {% url "contact_index" as page_url %}
+                    <li {% if page_url == current_url %} class="active"{% endif %}><a href="{{ page_url }}">Контакты</a></li>
+
+                    {% if user.is_authenticated %}
+                        {% url "categories_edit" as page_url %}
+                        <li class="indented"><a href="{{ page_url }}"{% if page_url == current_url %} class="current"{% endif %}>Категории</a></li>
+                        <li><a href="/admin/">Админка</a></li>
+                        <li class="indented"><a href="{% url "logout" %}">Выйти</a></li>
+                    {% endif %}
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+</header>
+<!--/#header-->

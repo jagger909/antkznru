@@ -1,0 +1,100 @@
+{% load staticfiles %}
+
+<!-- Why Chose -->
+<div class="cd-product-builder p_t">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 heading_center heading text-center">
+                <h2>Custom Car<span> Builder</span></h2>
+                <div class="center_title"><span><i class="fas fa-wrench"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header-product text-center">
+
+            <nav class="cd-builder-main-nav disabled">
+                <ul>
+                    <li class="active"><a href="#models">Models</a></li>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
+                    <li><a href="#summary">Summary</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="cd-builder-steps">
+
+            <ul>
+                <li data-selection="models" class="active builder-step">
+                    <div class="cd-step-content">
+                        <span class="steps-indicator">Step <b>1</b> of 4</span>
+                        <ul class="models-list options-list cd-col-2">
+
+                            <li class="js-option js-radio" data-price="42400" data-model="product-01">
+                                <span class="name">Model i3</span>
+                                <img src="{% static 'images/product01_col01.jpg' %}" alt="BMW i3">
+                                <span class="price">from $42.400</span>
+                                <div class="radio"></div>
+                            </li>
+
+                            <li class="js-option js-radio" data-price="140700" data-model="product-02">
+                                <span class="name">Model i5</span>
+                                <img src="{% static 'images/product02_col01.jpg' %}" alt="BMW i8">
+                                <span class="price">from $140.700</span>
+                                <div class="radio"></div>
+                            </li>
+
+                            <li class="js-option js-radio" data-price="140700" data-model="product-03">
+                                <span class="name">Model i8</span>
+                                <img src="{% static 'images/product01_col03.jpg' %}" alt="BMW i8">
+                                <span class="price">from $140.700</span>
+                                <div class="radio"></div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="cd-builder-footer disabled step-1">
+            <div class="selected-product">
+                <img src="{% static 'images/product01_col01.jpg' %}" alt="Product preview">
+
+                <div class="tot-price">
+                    <span>Total</span>
+                    <span class="total">$<b>0</b></span>
+                </div>
+            </div>
+
+            <nav class="cd-builder-secondary-nav">
+                <ul>
+                    <li class="next nav-item">
+                        <ul>
+                            <li class="visible"><a href="#0">Colors</a></li>
+                            <li><a href="#0">Accessories</a></li>
+                            <li><a href="#0">Summary</a></li>
+                            <li class="buy"><a href="#0">Buy Now</a></li>
+                        </ul>
+                    </li>
+                    <li class="prev nav-item">
+                        <ul>
+                            <li class="visible"><a href="#0">Models</a></li>
+                            <li><a href="#0">Models</a></li>
+                            <li><a href="#0">Colors</a></li>
+                            <li><a href="#0">Accessories</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <span class="alert">Please, select a model first!</span>
+        </div>
+
+    </div>
+
+</div>
+<!-- /#Why Chose -->

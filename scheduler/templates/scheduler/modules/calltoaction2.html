@@ -1,0 +1,40 @@
+{% load staticfiles %}
+
+<!-- Call to Action - 2 -->
+<section id="call-to-action">
+
+    <div class="container">
+        <div class="row p_t_b">
+
+            <div class="col-md-12">
+
+                <div class="heading_left heading">
+                    <h2>Позвоните <span>нам</span></h2>
+                    <div class="center_title"><span><i class="fa fa-wrench"></i></span></div>
+                </div>
+
+            </div>
+
+            <div class="col-md-7 col-sm-7 col-xs-12">
+
+                <div class="call-to-action2">
+
+                    <h2>Тел: 266-10-67</h2>
+                    <p>Ваш специалист по ремонту холодильного оборудования</p>
+                    <a href="tel:+78432661067" class="cd-btn third">Позвонить</a>
+                    <a href="{% url "callback_index" %}" class="cd-btn secondary">Сделать заявку</a>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-5 col-sm-5 col-xs-12">
+                <div class="call-to-action2-img">
+                    <img src="{% static 'images/call-to-action-3.png' %}">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- /#Call to Action - 2 -->

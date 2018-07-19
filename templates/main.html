@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block additional_css %}
+    {#<link type="text/css" href="{% static "main.css" %}" rel="stylesheet">#}
+{% endblock %}
+
+{% block content %}
+    {% include 'main/loader.html' %}
+    {% include 'main/header.html' %}
+
+    {% block main %}
+    {% endblock %}
+
+    {% include 'main/footer.html' %}
+
+{% endblock %}
