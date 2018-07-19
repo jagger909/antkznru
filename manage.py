@@ -14,7 +14,7 @@ logging.basicConfig(
 )
 logging.getLogger().setLevel(logging.DEBUG)
 logging.disable(logging.NOTSET)
-logging.getLogger("PIL.Image").setLevel(logging.WARNING)
+#logging.getLogger("PIL.Image").setLevel(logging.WARNING)
 logging.getLogger('environ').setLevel(logging.INFO)
 logging.debug("Importing: %s" % __file__)
 

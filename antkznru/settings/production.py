@@ -15,6 +15,7 @@ from pathlib import Path
 
 import environ
 
+
 logging.basicConfig(format='%(asctime)s %(levelname)-7s %(thread)-5d %(filename)s:%(lineno)s | %(funcName)s | %(message)s', datefmt='%H:%M:%S')
 logging.getLogger().setLevel(logging.DEBUG)
 logging.disable(logging.NOTSET)
