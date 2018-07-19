@@ -78,7 +78,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    #    'rest_framework',
+    # 'rest_framework',
     'easy_thumbnails',
 
 ]
@@ -174,8 +174,9 @@ USE_TZ = True
 
 STATIC_URL = BASE_URL + '/static/'
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+
 
 # STATICFILES_DIRS = (
 #     ('assets', str(BASE_DIR / 'assets')),
@@ -183,8 +184,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 # )
 
 # The default file storage backend used during the build process
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage
 
 
 # Password validation

@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView
 
-from scheduler import telegram_send
+from telebot import telegram_send
 from .forms import SchedulerForm
 from .models import Scheduler
 
@@ -108,8 +108,7 @@ def scheduler_add(request):
         if filtered_sched:
             return JsonResponse({"response": "Дата уже занята.", 'result': 'error'})
 
-        message = "*ЗАЯВКА С САЙТА*:" + "\n" + "*ИМЯ*: " + post_username + "\n" + "*ТЕЛЕФОН*: " + post_telephone + "\n" + "*АДРЕС*: " + post_address + "\n" + "*КОММЕНТАРИЙ*: " + post_comment + "\n" + "*ДАТА*: " + post_repair_date + " " + post_repair_time
-        telegram_send.send_message(message)
+
 
 
         sched = Scheduler(username=post_username,
@@ -123,7 +122,10 @@ def scheduler_add(request):
             sched.save()
         except ValueError:
             return JsonResponse({"response": "Не могу схранить заявку.", 'result': 'error'})
-        
+
+        message = "*ЗАЯВКА С САЙТА*:" + "\n" + "*ИМЯ*: " + post_username + "\n" + "*ТЕЛЕФОН*: " + post_telephone + "\n" + "*АДРЕС*: " + post_address + "\n" + "*КОММЕНТАРИЙ*: " + post_comment + "\n" + "*ДАТА*: " + post_repair_date + " " + Scheduler.TimeChoice.post_repair_time.value
+        telegram_send.send_message(message)
+
         request.session['has_send'] = True
         request.session['sched_un_id'] = post_un_id
 

@@ -1,18 +1,28 @@
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from django.views.generic.base import TemplateView
 from generic.mixins import CategoryListMixin
-from django.http import HttpRequest
+from telebot import telegram_send
+
+
+
 
 class CallBackView(TemplateView, CategoryListMixin):
     template_name = "callback/appointment.html"
 
 
-def sms_send(msg):
-    url = "http://sms.ru/sms/send?api_id=%(api_id)s&to=%(to)s&text=%(msg)s"
-    id_api = "AFAA4570-8FEE-0ADA-7EBE-781D7A61B515"
-    number = "9179354824"
-    urlToSend = url % {'api_id': id_api, 'to': number, 'msg': msg.encode('utf-8')}
-    res = HttpRequest.POST(urlToSend)
-    res = res.code
+def msg_send(request):
 
+    if request.method == 'POST':
+        phone_number = request.POST.get('phone_number')
+        question_text = request.POST.get('question_text')
+        user_name = request.POST.get('user_name')
 
-    return 'SMS status: %s' % res
+        message = "*ВОПРОС С САЙТА*:" + "\n" + "*ИМЯ*: " + user_name + "\n" + "*ТЕЛЕФОН*: " + phone_number + "\n" + "*КОММЕНТАРИЙ*: " + question_text
+        telegram_send.send_message(message)
+
+        return HttpResponseRedirect(reverse_lazy('main'))
+
+    else:
+        return HttpResponseRedirect(reverse_lazy('main'))
+
