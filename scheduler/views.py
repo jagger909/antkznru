@@ -123,7 +123,7 @@ def scheduler_add(request):
         except ValueError:
             return JsonResponse({"response": "Не могу схранить заявку.", 'result': 'error'})
 
-        message = "*ЗАЯВКА С САЙТА*:" + "\n" + "*ИМЯ*: " + post_username + "\n" + "*ТЕЛЕФОН*: " + post_telephone + "\n" + "*АДРЕС*: " + post_address + "\n" + "*КОММЕНТАРИЙ*: " + post_comment + "\n" + "*ДАТА*: " + post_repair_date + " " + Scheduler.TimeChoice.post_repair_time.value
+        message = "*ЗАЯВКА С САЙТА*:" + "\n" + "*ID*: " + post_un_id + "\n" + "*ИМЯ*: "  + post_username + "\n" + "*ТЕЛЕФОН*: " + post_telephone + "\n" + "*АДРЕС*: " + post_address + "\n" + "*КОММЕНТАРИЙ*: " + post_comment + "\n" + "*ДАТА*: " + post_repair_date +  "\n" + "*ВРЕМЯ*: " + getattr(Scheduler.TimeChoice, post_repair_time).value
         telegram_send.send_message(message)
 
         request.session['has_send'] = True

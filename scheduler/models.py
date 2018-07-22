@@ -1,6 +1,5 @@
 from django.db import models
 from generic.choice_enum import ChoiceEnum
-from enum import Enum
 # Create your models here.
 
 class Scheduler(models.Model):
@@ -16,10 +15,10 @@ class Scheduler(models.Model):
 
     username = models.CharField(max_length=20)
     address = models.CharField(max_length=200)
-    telephone = models.IntegerField()
+    telephone = models.CharField(max_length=12)
     comment = models.CharField(max_length=200, blank=True)
     repair_date = models.DateField()
-    repair_time = models.CharField(max_length=2, choices=TimeChoice.choices(), default=TimeChoice.T1)
+    repair_time = models.CharField(db_index= True, max_length=2, choices=TimeChoice.choices(), default=TimeChoice.T1)
     pub_date = models.DateTimeField(auto_now_add=True)
     sched_un_id = models.CharField(db_index= True, unique=True, max_length=10)
 

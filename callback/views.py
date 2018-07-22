@@ -6,7 +6,6 @@ from telebot import telegram_send
 
 
 
-
 class CallBackView(TemplateView, CategoryListMixin):
     template_name = "callback/appointment.html"
 

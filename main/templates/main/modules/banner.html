@@ -1,146 +1,37 @@
 {% load staticfiles %}
 
-{% comment %}
-<!-- Banner -->
-<section class="rev_slider_wrapper clearfix">
-    <!-- START REVOLUTION SLIDER 5.0 auto mode -->
-    <div id="rev_slider" class="rev_slider" data-version="5.0">
-        <ul>
-            <!-- SLIDE - 1 -->
-            <li data-transition="zoomout">
-                <!-- MAIN IMAGE --><img src="{% static 'images/bannar_12.jpg'%}" alt="" data-bgposition="center center"
-                                        data-bgfit="cover">
-                <!-- LAYER NR. 1 -->
-                <h1 class="tp-caption tp-resizeme text-left" data-x="left" data-y="280" data-width="full"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                    data-start="700">Ремонт <span class="col-b">ХОЛОДИЛЬНИКОВ</span> в Казани
-                </h1>
-                <!-- LAYER NR. 2 -->
-                <h2 class="tp-caption tp-resizeme text-left style" data-x="left" data-y="320" data-width="full"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                    data-start="500">
-                    <span>Скидка <span></span></span>
-                    При заказе с сайта -10%
-                </h2>
-                <!-- LAYER NR. 3 -->
-                <div class="tp-caption  tp-resizeme text-left" data-x="center" data-y="460" data-width="full"
-                     data-transform_idle="o:1;"
-                     data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                     data-start="1000">
-                    <p>Lorem Ipsum is simply dummy text of the, lorem Ipsum has been the <br> industry's. Quis nostrud
-                        exercitation ullamco laboris <br> nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <!-- LAYER NR. 4 -->
-                <div class="tp-caption  tp-resizeme text-left" data-x="left" data-y="550" data-width="full"
-                     data-transform_idle="o:1;"
-                     data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                     data-start="1500">
-                    <span class="scroll"><a href="#" class="cd-btn">Сделать заявку</a></span>
-                    <span class="scroll"><a href="#" class="cd-btn secondary">Связаться с нами</a></span>
-                </div>
-            </li>
+<div id="banner-hero" class="container-fluid">
+    <div class="jumbotron hero">
 
-            <li data-transition="fadetotopfadefrombottom"><img src="{% static 'images/bannar_12.jpg' %}" alt=""
-                                                               data-bgposition="center center" data-bgfit="cover">
-                <!-- LAYER NR. 1 -->
-                <h1 class="tp-caption tp-resizeme text-center" data-x="center" data-y="280" data-width="full"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                    data-start="700">Мы слушаем <span class="col-b">Улыбаемся</span> и делаем
-                </h1>
-                <!-- LAYER NR. 2 -->
-                <h2 class="tp-caption tp-resizeme text-center style" data-x="center" data-y="320" data-width="full"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                    data-start="500">
-                    <span>Our Goal<span></span></span>
-                    IS SATISFACTION
-                </h2>
-                <!-- LAYER NR. 3 -->
-                <div class="tp-caption  tp-resizeme text-center" data-x="center" data-y="460" data-width="full"
-                     data-transform_idle="o:1;"
-                     data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                     data-start="1000">
-                    <p>Lorem Ipsum is simply dummy text of the, lorem Ipsum has been the <br> industry's. Quis nostrud
-                        exercitation ullamco laboris <br> nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="text-center hero-row">
+            {% comment %}<h1 class="heading"><span>HERO</span> Design</h1>
+            <h2 class="subheading">Full screen Hero Style</h2>
+            <div class="btn-group">
+                <button class="btn btn-lg btnx-blue" type="button">Read more</button>
+                <button class="btn btn-lg btnx-white" type="button">Contact us</button>
+            </div>{% endcomment %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="banner_detail">
+                            <h2>Ремонт холодильников</h2>
+                            <div id="typewriter"></div>
+                            <div class="banner_button">
+                                <a href="tel:+78432661067" class="cd-btn">Позвонить</a>
+                                {% url "callback_index" as page_url %}
+                                <a href="{{ page_url }}" class="cd-btn secondary" data-toggle="modal" data-target="#gridSystemModal">Онлайн заявка</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- LAYER NR. 4 -->
-                <div class="tp-caption  tp-resizeme text-center" data-x="center" data-y="550" data-width="full"
-                     data-transform_idle="o:1;"
-                     data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                     data-start="1500">
-                    <span class="scroll"><a href="#" class="cd-btn">Get Started</a></span>
-                    <span class="scroll"><a href="#" class="cd-btn secondary">Contact Now</a></span>
-                </div>
-            </li>
+            </div>
+        </div>
 
-            <li data-transition="zoomin"><img src="{% static 'images/bannar_14.jpg' %}" alt="" data-bgposition="center center"
-                                              data-bgfit="cover">
-                <!-- LAYER NR. 1 -->
-                <h1 class="tp-caption tp-resizeme text-right" data-x="right" data-y="280" data-width="full"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                    data-start="700">BEST <span class="col-b">DISCOUNTED</span> DEALS
-                </h1>
-                <!-- LAYER NR. 2 -->
-                <h2 class="tp-caption tp-resizeme text-right style" data-x="right" data-y="320" data-width="full"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                    data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                    data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                    data-start="500">
-                    <span>Car Support <span></span></span>
-                    7/24 Hours
-                </h2>
-                <!-- LAYER NR. 3 -->
-                <div class="tp-caption  tp-resizeme text-right" data-x="right" data-y="460" data-width="full"
-                     data-transform_idle="o:1;"
-                     data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                     data-start="1000">
-                    <p>Lorem Ipsum is simply dummy text of the, lorem Ipsum has been the <br> industry's. Quis nostrud
-                        exercitation ullamco laboris <br> nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <!-- LAYER NR. 4 -->
-                <div class="tp-caption  tp-resizeme text-right" data-x="right" data-y="550" data-width="full"
-                     data-transform_idle="o:1;"
-                     data-transform_in="y:[-200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
-                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
-                     data-start="1500">
-                    <span class="scroll"><a href="#" class="cd-btn">Get Started</a></span>
-                    <span class="scroll"><a href="#" class="cd-btn secondary">Contact Now</a></span>
-                </div>
-            </li>
-
-        </ul>
     </div>
-    <!-- END REVOLUTION SLIDER -->
-</section>
-<!-- /#Banner -->
-{% endcomment %}
+</div>
 
+
+{% comment %}
 <!-- Banner -->
 <section id="banner-5" class="parallaxie">
     <div class="container">
@@ -159,4 +50,4 @@
         </div>
     </div>
 </section>
-<!-- /#Banner -->
+<!-- /#Banner -->{% endcomment %}

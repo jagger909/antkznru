@@ -260,3 +260,28 @@ function initMap() {
         zoom: 8
     });
 }
+
+window.sr = ScrollReveal();
+sr.reveal('.heading', {duration: 1000,
+                       origin: 'left',
+                       distance: '500px'
+                      });
+
+sr.reveal('.subheading', {duration: 1300,
+                          origin: 'right'
+                         });
+
+sr.reveal('.btn-group', {duration: 2000,
+                         origin: 'bottom',
+                         distance: '100px'
+                        });
+
+/*
+sr.reveal('.navbar', {duration: 1000,
+                      origin: 'top'
+                     });
+*/
+
+sr.reveal('.header-features', {duration: 3000,
+                               origin:'bottom'
+                              });

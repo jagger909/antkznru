@@ -40,7 +40,7 @@ class SchedulerForm(forms.ModelForm):
                               widget=forms.TextInput(attrs={'id': 'address_input',
                                                             'required': True,
                                                             'placeholder': 'Ваше имя...'}))
-    telephone = forms.IntegerField(label='Телефон',
+    telephone = forms.CharField(label='Телефон',
                                    required=True,
                                    help_text='Ваш номер телефона',
                                    error_messages='',

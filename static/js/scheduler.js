@@ -190,7 +190,7 @@ $(function () {
                 post_comment: $('#comment_input').val(),
                 post_repair_date: $clear_sched_data,
                 post_repair_time: $sched_time,
-                post_un_id: Math.random().toString(36).substr(2, 10),
+                post_un_id: Math.random().toString(36).substr(2, 10).toUpperCase(),
             }, // data sent with the post request
 
             // handle a successful response

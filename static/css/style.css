@@ -1340,8 +1340,9 @@ header nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .col-menu {
 
 /*** Slider - 5 ***/
 #banner-5 {
-    padding: 15% 0 15%;
-    background: url(../images/main/banner.jpg);
+    padding: 10% 0 15%;
+    background: url(../images/call-to-action-2.jpg);
+    /*background: url(../images/main/banner.jpg);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1369,15 +1370,161 @@ header nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .col-menu {
     color: #d44457;
 }
 
+/*HERRRRRROOOOOOO!*/
+
+.container-fluid {
+	margin: 0;
+	padding: 0;
+}
+
+.btnx-blue {
+    background-color: #2874A6;
+}
+
+.btnx-blue:hover,
+.btnx-blue:focus,
+.btnx-blue:active,
+.btnx-blue:visited {
+    background-color: #1F618D;
+    color: #fcfcfc;
+}
+
+.btnx-white {
+    background-color: #fcfcfc;
+    color: #131313;
+}
+
+.btnx-white:hover {
+    background-color: #D0D3D4;
+    color: #131313;
+}
+
+.btnx-white:hover,
+.btnx-white:focus,
+.btnx-white:active,
+.btnx-white:visited {
+    background-color: #D0D3D4;
+    color: #131313;
+}
+#banner-hero .banner_detail h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 5px 0 5px #000;
+}
+
+#banner-hero .banner_detail #typewriter {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 30px 0;
+    text-shadow: 2px 0 2px #000;
+    min-height: 150px;
+}
+
+#typewriter-text {
+    color: #d44457;
+}
+.jumbotron.hero {
+	color: #fcfcfc;
+	height: 80vh;
+    width: 100%;
+	margin: 0;
+	padding: 0;
+    padding-top: 20vh;
+	background-image: url(../images/main/banner.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: table;
+	border-radius: 0;
+}
+
+.jumbotron.hero .heading {
+	font-weight: 900;
+}
+
+.jumbotron.hero .heading > span {
+	color: #5499C7;
+}
+
+.jumbotron.hero .subheading {
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+	color: #5499C7;
+}
+
+.header-features {
+	padding: 10px;
+}
+
+.header-features > div {
+	padding: 0 50px;
+}
+
+.header-features > div > div {
+	border-left: 1px solid #2874A6;
+	border-right: 1px solid #2874A6;
+}
+
+.header-features > div > span {
+	font-size: 32px;
+}
+
+.header-features p {
+	font-size: 14px;
+}
+
+.hero-row {
+	display: table-row;
+}
+
+.hero-row.hero-bottom {
+	display: table-cell;
+	vertical-align: bottom;
+}
+
+
+
+
+
+
+
+
+
 /** Banner - 6 **/
 #main-slider.banner-6 .carousel-content {
     margin: 20% 0;
     width: 50%;
     transform: skew(-20deg);
     background: rgba(0, 0, 0, 0.9);
-    padding: 30px 30px;
+    padding: 10% 0 15%;
     text-align: center;
-    padding: 20px 0;
+}
+
+#main-slider .banner_detail h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 5px 0 5px #000;
+}
+
+
+#main-slider .banner_detail #typewriter {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 30px 0;
+    text-shadow: 2px 0 2px #000;
+    min-height: 150px;
+}
+
+#typewriter-text {
+    color: #d44457;
 }
 
 #main-slider.banner-6 .carousel-content h1 {
@@ -2227,9 +2374,11 @@ h2.tp-caption.tp-resizeme.style > span > span {
     text-transform: capitalize;
     color: #7a9e9f;
 }
+
 .form-group {
     /*height: 90px;*/
 }
+
 /* ================================= */
 /* ---------- Services CSS --------- */
 /* ================================= */
@@ -6334,7 +6483,7 @@ form.contact-page .col-md-12 {
         display: none;
     }
 
-    #banner-5 .banner_detail h2 {
+    #banner-hero .banner_detail h2 {
 
         color: #fff;
         text-transform: uppercase;
@@ -6343,7 +6492,7 @@ form.contact-page .col-md-12 {
         text-shadow: 5px 0 5px #000;
     }
 
-    #banner-5 .banner_detail #typewriter {
+    #banner-hero .banner_detail #typewriter {
 
         color: #fff;
         text-transform: uppercase;
