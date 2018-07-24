@@ -1,0 +1,17 @@
+{% extends "scheduler/scheduler_index.html" %}
+{% block title %}Правка заявки :: {{ sched.sched_un_id }}{% endblock %}
+{% block main %}
+    {% include "scheduler/modules/inner_banner.html" %}
+    <div class="container">
+        <div class="row">
+            <h2>Правка товара</h2>
+            <div class="form">
+                <form action="" method="post">
+                    {% include "generic/form.html" %}
+                    <div class="submit-button"><input type="submit" value="Изменить"></div>
+                </form>
+            </div>
+            <p><a href="{% url "scheduler_index" %}?page={{ pn }}&sort={{ sort }}&order={{ order }}">Назад</a></p>
+        </div>
+    </div>
+{% endblock %}

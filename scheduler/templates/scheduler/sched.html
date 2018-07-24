@@ -1,0 +1,28 @@
+{% extends "scheduler/scheduler_index.html" %}
+
+{% block title %}Заявка :: {{ object.sched_un_id }}{% endblock %}
+{% block main %}
+    {% include "scheduler/modules/inner_banner.html" %}
+    <div class="container">
+        <div class="row">
+
+            <h2>{{ object.sched_un_id }}</h2>
+            <p>Имя: <span class="">{{ object.username }}</span></p>
+            <p>Адрес: <span class="">{{ object.address }}</span></p>
+            <p>Телефон: <span class="">{{ object.telephone }}</span></p>
+            <p>Комментарий: <span class="">{{ object.comment }}</span></p>
+            <p>Дата ремонта: <span class="">{{ object.repair_date }}</span></p>
+            <p>Время ремонта: <span class="">{{ object.repair_time }}</span></p>
+            <p>Дата публикации: <span class="">{{ object.pub_date }}</span></p>
+            {% if perms.page.change_sched %}
+                <p class=""><a href="{% url "scheduler_edit" sched_un_id=object.sched_un_id %}?page={{ page_obj.number }}&sort={{ sort }}&order={{ order }}">Изменить</a></p>
+            {% endif %}
+            {% if perms.page.delete_sched %}
+                <p class=""><a href="{% url "scheduler_delete" sched_un_id=object.sched_un_id %}?page={{ page_obj.number }}&sort={{ sort }}&order={{ order }}">Удалить</a></p>
+            {% endif %}
+
+            <p><a href="{% url "scheduler_index" %}?page={{ pn }}&sort={{ sort }}&order={{ order }}">Назад</a></p>
+        </div>
+    </div>
+{% endblock %}
+

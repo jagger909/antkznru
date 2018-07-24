@@ -1373,8 +1373,8 @@ header nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .col-menu {
 /*HERRRRRROOOOOOO!*/
 
 .container-fluid {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .btnx-blue {
@@ -1406,6 +1406,7 @@ header nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .col-menu {
     background-color: #D0D3D4;
     color: #131313;
 }
+
 #banner-hero .banner_detail h2 {
     color: #fff;
     text-transform: uppercase;
@@ -1427,72 +1428,65 @@ header nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .col-menu {
 #typewriter-text {
     color: #d44457;
 }
+
 .jumbotron.hero {
-	color: #fcfcfc;
-	height: 80vh;
+    color: #fcfcfc;
+    height: 80vh;
     width: 100%;
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
     padding-top: 20vh;
-	background-image: url(../images/main/banner.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: table;
-	border-radius: 0;
+    background-image: url(../images/main/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    border-radius: 0;
 }
 
 .jumbotron.hero .heading {
-	font-weight: 900;
+    font-weight: 900;
 }
 
 .jumbotron.hero .heading > span {
-	color: #5499C7;
+    color: #5499C7;
 }
 
 .jumbotron.hero .subheading {
-	font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-	color: #5499C7;
+    color: #5499C7;
 }
 
 .header-features {
-	padding: 10px;
+    padding: 10px;
 }
 
 .header-features > div {
-	padding: 0 50px;
+    padding: 0 50px;
 }
 
 .header-features > div > div {
-	border-left: 1px solid #2874A6;
-	border-right: 1px solid #2874A6;
+    border-left: 1px solid #2874A6;
+    border-right: 1px solid #2874A6;
 }
 
 .header-features > div > span {
-	font-size: 32px;
+    font-size: 32px;
 }
 
 .header-features p {
-	font-size: 14px;
+    font-size: 14px;
 }
 
 .hero-row {
-	display: table-row;
+    display: table-row;
 }
 
 .hero-row.hero-bottom {
-	display: table-cell;
-	vertical-align: bottom;
+    display: table-cell;
+    vertical-align: bottom;
 }
-
-
-
-
-
-
-
-
 
 /** Banner - 6 **/
 #main-slider.banner-6 .carousel-content {
@@ -1511,7 +1505,6 @@ header nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .col-menu {
     font-weight: 700;
     text-shadow: 5px 0 5px #000;
 }
-
 
 #main-slider .banner_detail #typewriter {
     color: #fff;
@@ -2374,10 +2367,50 @@ h2.tp-caption.tp-resizeme.style > span > span {
     text-transform: capitalize;
     color: #7a9e9f;
 }
-
+#calendar-box {
+    position: relative;
+}
 .form-group {
     /*height: 90px;*/
 }
+
+#loading-image {
+    position: absolute;
+    top: 20%;
+    right: 50%;
+}
+
+/* Authentication forms */
+.form-box form,
+.form-box .form-message {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-box form .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-box form .checkbox {
+  font-weight: normal;
+}
+
+.form-box form .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-box form .form-control:focus {
+  z-index: 2;
+}
+
+
 
 /* ================================= */
 /* ---------- Services CSS --------- */
@@ -4173,7 +4206,7 @@ body.boday-img .footer-bottom {
 /* -------- About us Page CSS ------ */
 /* ================================= */
 .page-banner {
-    background: url(../images/bannar_11.jpg);
+    background: url(../images/main/banner.jpg);
     background-position: center 50%;
     background-size: cover;
     padding: 10% 0 0;

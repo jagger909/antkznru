@@ -1,4 +1,5 @@
 from datetime import datetime
+
 from django import forms
 
 from .models import Scheduler
@@ -33,7 +34,7 @@ class SchedulerForm(forms.ModelForm):
                                                              'placeholder': 'Ваше имя...'}))
     honeypot = forms.CharField(required=False,
                                label="",
-                               widget=forms.TextInput(attrs={'style': "display: None",}))
+                               widget=forms.TextInput(attrs={'style': "display: None", }))
     address = forms.CharField(label='Адрес',
                               help_text='Ваш адрес',
                               error_messages='',
@@ -41,12 +42,12 @@ class SchedulerForm(forms.ModelForm):
                                                             'required': True,
                                                             'placeholder': 'Ваше имя...'}))
     telephone = forms.CharField(label='Телефон',
-                                   required=True,
-                                   help_text='Ваш номер телефона',
-                                   error_messages='',
-                                   widget=forms.TextInput(attrs={'id': 'telephone_input',
-                                                                 'required': True,
-                                                                 'placeholder': 'Ваше номер телефона...'}))
+                                required=True,
+                                help_text='Ваш номер телефона',
+                                error_messages='',
+                                widget=forms.TextInput(attrs={'id': 'telephone_input',
+                                                              'required': True,
+                                                              'placeholder': 'Ваше номер телефона...'}))
     comment = forms.CharField(label='Комментарий',
                               help_text='Введите дополнительную информацию',
                               error_messages='',
@@ -59,8 +60,10 @@ class SchedulerForm(forms.ModelForm):
                                   help_text='Выберите дату ремонта',
                                   error_messages='',
                                   widget=forms.DateInput(attrs={'type': 'Date',
-                                                                'id': 'date_input'}),
-                                  initial=datetime.now().date().strftime('%Y-%m-%d'))
+                                                                'id': 'date_input'},
+                                                         format="%Y-%m-%d"),
+                                  initial=datetime.now().date().strftime('%Y-%m-%d'),
+                                  )
     repair_time = forms.ChoiceField(choices=Scheduler.TimeChoice.choices(),
                                     widget=forms.RadioSelect())
 
