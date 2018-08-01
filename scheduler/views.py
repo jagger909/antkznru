@@ -80,7 +80,7 @@ def scheduler_add(request):
 
         # Уже регистрировал заявку?
         if request.session.get('has_send', False):
-            return JsonResponse({"response": "Вы уже записаны на ремонт. Свяжитесь с менеджером.", 'result': 'has_send', 'sched_un_id': post_un_id})
+            return JsonResponse({"response": "Вы уже записаны на ремонт. Свяжитесь с менеджером.", 'result': 'has_send', 'sched_un_id': request.session.get('sched_un_id')})
 
         # Проверка на свободность временного окна.
         filtered_sched = Scheduler.objects.filter(repair_date=post_repair_date, repair_time=post_repair_time)
@@ -143,21 +143,21 @@ class SchedulerListView(PageNumberView, ListView, SortMixin, CategoryListMixin):
 
     def get_queryset(self):
         schedulers = Scheduler.objects.all()
-        if self.sort == "2":
+        if self.sort == "1":
             if self.order == "D":
-                schedulers = schedulers.order_by("-repair_date", "-repair_time")
-            else:
                 schedulers = schedulers.order_by("repair_date", "repair_time")
-        elif self.sort == "1":
-            if self.order == "D":
-                schedulers = schedulers.order_by("-repair_date", "repair_time")
             else:
+                schedulers = schedulers.order_by("-repair_date", "-repair_time")
+        elif self.sort == "2":
+            if self.order == "D":
                 schedulers = schedulers.order_by("repair_date", "-repair_time")
-        else:
-            if self.order == "D":
-                schedulers = schedulers.order_by("-repair_time")
             else:
-                schedulers = schedulers.order_by("repair_time")
+                schedulers = schedulers.order_by("-repair_date", "repair_time")
+        else:
+            if self.order == "A":
+                schedulers = schedulers.order_by("-pub_date")
+            else:
+                schedulers = schedulers.order_by("pub_date")
         return schedulers
 
 

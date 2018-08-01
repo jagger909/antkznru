@@ -1,0 +1,39 @@
+2018-07-19 18:50:18 DEBUG   139705297565440 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-19 18:50:18 DEBUG   139705297565440 urllib3.connectionpool connectionpool.py:823 | _new_conn | Starting new HTTPS connection (1): api.telegram.org:443
+2018-07-19 18:50:20 DEBUG   139705297565440 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 663
+2018-07-19 21:28:57 DEBUG   139705297565440 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-19 21:28:57 DEBUG   139705297565440 urllib3.connectionpool connectionpool.py:823 | _new_conn | Starting new HTTPS connection (1): api.telegram.org:443
+2018-07-19 21:28:58 DEBUG   139705297565440 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 660
+2018-07-19 21:44:54 DEBUG   139705297565440 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-19 21:44:54 DEBUG   139705297565440 urllib3.connectionpool connectionpool.py:240 | _get_conn | Resetting dropped connection: api.telegram.org
+2018-07-19 21:45:13 DEBUG   139705297565440 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 746
+2018-07-19 22:49:02 DEBUG   139705297565440 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-19 22:49:02 DEBUG   139705297565440 urllib3.connectionpool connectionpool.py:240 | _get_conn | Resetting dropped connection: api.telegram.org
+2018-07-19 22:49:03 DEBUG   139705297565440 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 704
+2018-07-20 09:18:23 DEBUG   140118354654976 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-20 09:18:23 DEBUG   140118354654976 urllib3.connectionpool connectionpool.py:823 | _new_conn | Starting new HTTPS connection (1): api.telegram.org:443
+2018-07-20 09:18:24 DEBUG   140118354654976 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 963
+2018-07-20 10:02:18 DEBUG   139764518364928 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-20 10:02:18 DEBUG   139764518364928 urllib3.connectionpool connectionpool.py:823 | _new_conn | Starting new HTTPS connection (1): api.telegram.org:443
+2018-07-20 10:02:18 DEBUG   139764518364928 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 1067
+2018-07-20 12:23:02 DEBUG   139764518364928 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-20 12:23:02 DEBUG   139764518364928 urllib3.connectionpool connectionpool.py:240 | _get_conn | Resetting dropped connection: api.telegram.org
+2018-07-20 12:23:03 DEBUG   139764518364928 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 959
+2018-07-22 17:10:34 DEBUG   140538655946496 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-22 17:10:34 DEBUG   140538655946496 urllib3.connectionpool connectionpool.py:823 | _new_conn | Starting new HTTPS connection (1): api.telegram.org:443
+2018-07-22 17:10:34 DEBUG   140538655946496 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 711
+2018-07-22 22:27:57 DEBUG   140538655946496 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-22 22:27:57 DEBUG   140538655946496 urllib3.connectionpool connectionpool.py:823 | _new_conn | Starting new HTTPS connection (1): api.telegram.org:443
+2018-07-22 22:28:02 DEBUG   140538655946496 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 1054
+2018-07-23 11:35:29 DEBUG   140536414758656 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-23 11:35:29 DEBUG   140536414758656 urllib3.connectionpool connectionpool.py:823 | _new_conn | Starting new HTTPS connection (1): api.telegram.org:443
+2018-07-23 11:35:30 DEBUG   140536414758656 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 957
+2018-07-23 12:30:01 DEBUG   140318067607296 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-23 12:30:01 DEBUG   140318067607296 urllib3.connectionpool connectionpool.py:823 | _new_conn | Starting new HTTPS connection (1): api.telegram.org:443
+2018-07-23 12:30:02 DEBUG   140318067607296 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 963
+2018-07-23 13:20:34 DEBUG   140318067607296 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-23 13:20:34 DEBUG   140318067607296 urllib3.connectionpool connectionpool.py:823 | _new_conn | Starting new HTTPS connection (1): api.telegram.org:443
+2018-07-23 13:20:34 DEBUG   140318067607296 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 950
+2018-07-24 05:06:03 DEBUG   140318067607296 urllib3.util.retry retry.py:210 | from_int | Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=0, status=None)
+2018-07-24 05:06:03 DEBUG   140318067607296 urllib3.connectionpool connectionpool.py:240 | _get_conn | Resetting dropped connection: api.telegram.org
+2018-07-24 05:06:03 DEBUG   140318067607296 urllib3.connectionpool connectionpool.py:393 | _make_request | https://api.telegram.org:443 "POST /bot490857250:AAGSUgsXv1voCyEvkMKDmdp2TQlnmgjEhUU/sendMessage HTTP/1.1" 200 3366

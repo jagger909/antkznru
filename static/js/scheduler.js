@@ -190,6 +190,8 @@ $(function () {
                 var calendar_box = $("#calendar-box");
                 calendar_box.empty();
 
+                // # TODO
+                // # Сортировка даты
                 function sortObject(o) {
                     return Object.keys(o).sort().reduce((r, k) => (r[k] = o[k], r), {});
                 }
@@ -277,6 +279,7 @@ $(function () {
                 if (data['result'] === 'success') {
                     $("#errors-modal").children().remove();
                     $('#wizard').bootstrapWizard('show', 2);
+                    dataLayer.push({'event': 'ajax_scheduler_send'});
                 }
                 if (data['result'] === 'has_send') {
                     $('#wizard').bootstrapWizard('show', 2);

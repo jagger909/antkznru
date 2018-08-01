@@ -17,9 +17,9 @@
                             <h2>Ремонт холодильников</h2>
                             <div id="typewriter"></div>
                             <div class="banner_button">
-                                <a href="tel:+78432661067" class="cd-btn">Позвонить</a>
+                                <a id="banner-phone-click" href="tel:+78432661067" class="cd-btn">Позвонить</a>
                                 {% url "callback_index" as page_url %}
-                                <a href="{{ page_url }}" class="cd-btn secondary" data-toggle="modal" data-target="#gridSystemModal">Онлайн заявка</a>
+                                <a id="banner-sched-click"href="{{ page_url }}" class="cd-btn secondary" data-toggle="modal" data-target="#gridSystemModal">Он-лайн заявка</a>
                             </div>
                         </div>
                     </div>

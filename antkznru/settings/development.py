@@ -30,10 +30,12 @@ environment_config = Path(__file__).with_suffix('.env')
 if environment_config.exists():
     environ.Env.read_env(str(environment_config))
 
+# noinspection PyUnresolvedReferences
+from .base import *
+
 # if 'DATABASE_URL' not in os.environ:
     # This a default fallback for local development and testing
     # BASE_DIR = Path(__file__).parents[2]
     # os.environ['DATABASE_URL'] = 'sqlite:///' + str(BASE_DIR / 'data' / 'db.dev.sqlite3')
     # os.environ['DATABASE_TEST_NAME'] = 'sqlite:///' + str(BASE_DIR / 'data' / 'db.tests.sqlite3')
 
-from .base import *

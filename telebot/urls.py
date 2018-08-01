@@ -1,9 +1,9 @@
 # -*- coding: utf8 -*-
 
-from django.conf.urls import url
+from django.urls import path
 
 from .views import CommandReceiveView
 
 urlpatterns = [
-    url(r'^bot/(?P<bot_token>.+)/$', CommandReceiveView.as_view(), name='command'),
+    path('bot/<bot_token>/', CommandReceiveView.as_view(), name='command'),
 ]

@@ -60,3 +60,4 @@ log_file = Path(LOGGING['handlers']['file']['filename'])
 if not log_file.parent.exists():  # pragma: no cover
     logging.info("Creating log directory: {}".format(log_file.parent))
     Path(log_file).parent.mkdir(parents=True)
+

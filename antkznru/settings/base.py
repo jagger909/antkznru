@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 """
 
-# from __future__ import absolute_import, unicode_literals
+from __future__ import absolute_import, unicode_literals
 import logging
 
 logging.basicConfig(format='%(asctime)s %(levelname)-7s %(thread)-5d %(filename)s:%(lineno)s | %(funcName)s | %(message)s', datefmt='%H:%M:%S')
@@ -30,11 +30,13 @@ logging.debug("Settings loading: %s" % __file__)
 
 # noinspection PyUnresolvedReferences
 from .components.telegram import *
+
 # from .components.import_export import *
 # from .components.sentry import *
 
 # Other imports can cause change in core settings
 # we should import core last
+from .components.core import env, BASE_DIR
 from .components.core import *
 
 # │ Customizations made for this project only should go bellow
@@ -51,3 +53,5 @@ INSTALLED_APPS += (
     'categories.apps.CategoriesConfig',
     'crispy_forms',
 )
+
+

@@ -11,56 +11,58 @@
             {% if perms.scheduler.add_sched %}
                 <p><a href="{% url "scheduler_add" %}?page={{ page_obj.number }}&sort={{ sort }}&order={{ order }}">Добавить заявку</a></p>
             {% endif %}
-
-            <table class="table table-bordered table-hover table-condensed table-responsive">
-                <thead>
-                <tr>
-                    <th>UN_ID</th>
-                    <th>Имя</th>
-                    <th>Адрес</th>
-                    <th>Телефон</th>
-                    <th>Коммент</th>
-                    <th>
-                        <a href="?sort=1&order={% if sort == "1" and order == "A" %}D{% else %}A{% endif %}">
-                            {% if sort == "1" %}{% if order == "D" %}&#9660;{% else %}&#9650;{% endif %}{% endif %}&nbsp;Дата ремонта
-                        </a>
-                    </th>
-                    <th>Время ремонта</th>
-                    <th>Дата публикации</th>
-                    {% if perms.page.change_sched %}
-                        <th>Изменить</th>
-                    {% endif %}
-                    {% if perms.page.delete_sched %}
-                        <th>Удалить</th>
-                    {% endif %}
-
-                </tr>
-                </thead>
-                <tbody>
-                {% for object in object_list %}
+            <div class="col-sm-12 table-bordered table-hover table-condensed table-responsive">
+                <table class="table">
+                    <thead>
                     <tr>
-                        <td><span><a href="{% url "scheduler_detail" sched_un_id=object.sched_un_id %}?page={{ page_obj.number }}&sort={{ sort }}&order={{ order }}">{{ object.sched_un_id }}</a></span>
-                        </td>
-                        <td class="centered"><span class="">{{ object.username }}</span></td>
-                        <td class="centered"><span class="">{{ object.address }}</span></td>
-                        <td class="centered"><span class="">{{ object.telephone }}</span></td>
-                        <td class="centered"><span class="">{% if object.comment %} + {% else %} - {% endif %}</span></td>
-                        <td class="centered"><span class="">{{ object.repair_date }}</span></td>
-                        <td class="centered"><span class="">{{ object.repair_time }}</span></td>
-                        <td class="centered"><span class="">{{ object.pub_date }}</span></td>
+                        <th>UN_ID</th>
+                        <th>Имя</th>
+                        <th>Адрес</th>
+                        <th>Телефон</th>
+                        <th>Коммент</th>
+                        <th>
+                            <a href="?sort=1&order={% if sort == "1" and order == "A" %}D{% else %}A{% endif %}">
+                                {% if sort == "1" %}{% if order == "D" %}&#9660;{% else %}&#9650;{% endif %}{% endif %}&nbsp;Дата ремонта
+                            </a>
+                        </th>
+                        <th>Время ремонта</th>
+                        <th>Дата публикации</th>
                         {% if perms.page.change_sched %}
-                            <td class="centered"><a href="{% url "scheduler_edit" sched_un_id=object.sched_un_id %}?page={{ page_obj.number }}&sort={{ sort }}&order={{ order }}">Изменить</a></td>
+                            <th>Изменить</th>
                         {% endif %}
                         {% if perms.page.delete_sched %}
-                            <td class="centered"><a href="{% url "scheduler_delete" sched_un_id=object.sched_un_id %}?page={{ page_obj.number }}&sort={{ sort }}&order={{ order }}">Удалить</a></td>
+                            <th>Удалить</th>
                         {% endif %}
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
 
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for object in object_list %}
+                        <tr>
+                            <td><span><a
+                                    href="{% url "scheduler_detail" sched_un_id=object.sched_un_id %}?page={{ page_obj.number }}&sort={{ sort }}&order={{ order }}">{{ object.sched_un_id }}</a></span>
+                            </td>
+                            <td class="centered"><span class="">{{ object.username }}</span></td>
+                            <td class="centered"><span class="">{{ object.address }}</span></td>
+                            <td class="centered"><span class="">{{ object.telephone }}</span></td>
+                            <td class="centered"><span class="">{% if object.comment %} + {% else %} - {% endif %}</span></td>
+                            <td class="centered"><span class="">{{ object.repair_date }}</span></td>
+                            <td class="centered"><span class="">{{ object.repair_time }}</span></td>
+                            <td class="centered"><span class="">{{ object.pub_date }}</span></td>
+                            {% if perms.page.change_sched %}
+                                <td class="centered"><a href="{% url "scheduler_edit" sched_un_id=object.sched_un_id %}?page={{ page_obj.number }}&sort={{ sort }}&order={{ order }}">Изменить</a></td>
+                            {% endif %}
+                            {% if perms.page.delete_sched %}
+                                <td class="centered"><a href="{% url "scheduler_delete" sched_un_id=object.sched_un_id %}?page={{ page_obj.number }}&sort={{ sort }}&order={{ order }}">Удалить</a></td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
 
             {% include "generic/pagination.html" %}
+
         </div>
     </div>
 {% endblock %}

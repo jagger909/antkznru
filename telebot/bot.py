@@ -42,6 +42,7 @@ def on_chat_message(msg):
     msg_id = msg['message_id']
     M = "Markdown"
     print(msg['text'], msg['chat']['id'])
+
     #############################
     # COMANDOS
     #############################

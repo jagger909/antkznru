@@ -4219,6 +4219,7 @@ body.boday-img .footer-bottom {
     font-weight: 700;
     font-size: 36px;
     padding-bottom: 10%;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .bread-crumb {
