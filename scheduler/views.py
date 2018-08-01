@@ -71,16 +71,16 @@ def scheduler_free_time(request):
 def scheduler_add(request):
     if request.method == 'POST':
 
+        # Уже регистрировал заявку?
+        if request.session.get('has_send', False):
+            return JsonResponse({"response": "Вы уже записаны на ремонт. Свяжитесь с менеджером.", 'result': 'has_send', 'sched_un_id': request.session.get('sched_un_id')})
+
         post_username = request.POST.get('post_username')
         post_address = request.POST.get('post_address')
         post_telephone = request.POST.get('post_telephone')
         post_comment = request.POST.get('post_comment')
         post_repair_date = request.POST.get('post_repair_date')
         post_repair_time = request.POST.get('post_repair_time')
-
-        # Уже регистрировал заявку?
-        if request.session.get('has_send', False):
-            return JsonResponse({"response": "Вы уже записаны на ремонт. Свяжитесь с менеджером.", 'result': 'has_send', 'sched_un_id': request.session.get('sched_un_id')})
 
         # Проверка на свободность временного окна.
         filtered_sched = Scheduler.objects.filter(repair_date=post_repair_date, repair_time=post_repair_time)
