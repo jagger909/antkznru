@@ -25,11 +25,15 @@ class Scheduler(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
-        if not self.id:
+        if not self.sched_un_id:
             # Newly created object, so set slug
             self.sched_un_id = get_random_string(length=10)
 
         super(Scheduler, self).save(*args, **kwargs)
+
+    def getSchedFree(self):
+        # TODO сделать толстыми модели и тонкими представления
+        pass
 
     def __str__(self):
         return self.sched_un_id

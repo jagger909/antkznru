@@ -190,13 +190,14 @@ $(function () {
                 var calendar_box = $("#calendar-box");
                 calendar_box.empty();
 
-                // # TODO
+                // # TODO: Не правильно сортирует дату. 31ое число больше чем 1ое следующего.
                 // # Сортировка даты
                 function sortObject(o) {
                     return Object.keys(o).sort().reduce((r, k) => (r[k] = o[k], r), {});
                 }
 
-                var sched_data = sortObject(data.busy_times);
+                // var sched_data = sortObject(data.busy_times);
+                var sched_data = data.busy_times;
 
                 $('#loading-image').remove();
 
