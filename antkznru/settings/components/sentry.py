@@ -24,7 +24,7 @@ core.LOGGING['loggers']['raven'] = {
 }
 
 core.LOGGING.setdefault('filters', {})['sentry_filter'] = {
-    '()': 'DJZoom.misc.sentry.SentryLogFilter',
+    '()': 'antkznru.misc.sentry.SentryLogFilter',
     'exclude_loggers': 'backoff',
 }
 
