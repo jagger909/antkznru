@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 
 from django import forms
 
@@ -40,7 +40,7 @@ class SchedulerForm(forms.ModelForm):
                               error_messages='',
                               widget=forms.TextInput(attrs={'id': 'address_input',
                                                             'required': True,
-                                                            'placeholder': 'Ваше имя...'}))
+                                                            'placeholder': 'Ваш адрес...'}))
     telephone = forms.CharField(label='Телефон',
                                 required=True,
                                 help_text='Ваш номер телефона',
@@ -59,10 +59,10 @@ class SchedulerForm(forms.ModelForm):
     repair_date = forms.DateField(label='Дата',
                                   help_text='Выберите дату ремонта',
                                   error_messages='',
-                                  widget=forms.DateInput(attrs={'type': 'Date',
+                                  widget=forms.DateInput(attrs={'type': 'date',
                                                                 'id': 'date_input'},
                                                          format="%Y-%m-%d"),
-                                  initial=datetime.now().date().strftime('%Y-%m-%d'),
+                                  # initial=datetime.date.today().strftime('%Y-%m-%d'),
                                   )
     repair_time = forms.ChoiceField(choices=Scheduler.TimeChoice.choices(),
                                     widget=forms.RadioSelect())

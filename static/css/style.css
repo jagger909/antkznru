@@ -1410,7 +1410,7 @@ header nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .col-menu {
 #banner-hero .banner_detail h2 {
     color: #fff;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 700;
     text-shadow: 5px 0 5px #000;
 }
@@ -4282,7 +4282,7 @@ body.boday-img .footer-bottom {
 
 #services-page.our-value .services-page-box p {
     font-weight: 200;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #services-page.our-value .services-page-box {
@@ -4343,7 +4343,7 @@ body.boday-img .footer-bottom {
 }
 
 .services-page-box h2 {
-    font-size: 30px;
+    font-size: 20px;
     color: #d44457;
     font-weight: 600;
     padding: 20px 0;
